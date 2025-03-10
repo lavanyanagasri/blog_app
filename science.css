@@ -1,0 +1,370 @@
+* {
+ font-family: "Poppins", sans-serif;
+ font-weight: 300;
+ font-style: normal;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+background-color: white;
+}
+nav {
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ background-color: white;
+ width: 100%;
+ height: 90px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+nav ul {
+ display: flex;
+ padding: 0px 10px;
+ text-decoration: none;
+ padding-left: 400px;
+}
+
+nav ul li {
+ list-style: none;
+ margin-top: 30px;
+ opacity: 0;
+animation: slideTop 1s ease forwards;
+animation-delay: .9s;
+}
+
+nav ul li a {
+ text-decoration: none;
+ color: rgb(6, 8, 10);
+ position: relative;
+ font-size: 21px;
+ text-decoration: none;
+ font-weight: 500;
+ margin-left: 35px;
+
+ transition: .3s;
+
+}
+
+nav ul li a:hover {
+ color: rgb(244, 162, 30);
+}
+
+nav ul li a::after {
+ content: '';
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 0;
+ height: 2px;
+ transition: 0.5s;
+ background: #627006;
+ font-size: 18px;
+ color: #fff;
+ text-decoration: none;
+}
+
+nav ul li a:hover::after {
+ width: 100%;
+}
+
+img {
+ width: 100%;
+ height: 450px;
+}
+
+.j {
+ display: flex;
+}
+
+.y {
+ margin-left: 200px;
+ margin-top: 30px;
+}
+
+.logo {
+ display: flex;
+ flex-direction: row;
+ opacity: 0;
+animation: slideTop 1s ease forwards;
+animation-delay: .9s;
+}
+
+.logo i {
+ padding: 10px 10px;
+ color: coral;
+ font-size: 30px;
+ transition: .5s ease;
+}
+
+.logo i:hover {
+ background: ef;
+ color: #0f1e3a;
+ transform: scale(1.2);
+}
+
+.j .y {
+ margin-top: 0px;
+ margin-bottom: 40px;
+}
+
+.j .y h1{
+ opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .9s;
+}
+.j .y ul li {
+ list-style: none;
+ opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .9s;
+}
+
+.j .y ul li a {
+ transition: .3s;
+ font-size: 30px;
+ 
+}
+
+.j .y ul li a:hover {
+ color: rgb(155, 207, 34);
+}
+
+#section1 {
+ background-image: url('earth.jpg');
+ background-size: cover;
+ background-attachment: fixed;
+ background-position: center;
+ width: 100%;
+ min-height: 80vh;
+ margin-bottom: 50px;
+}
+
+.c {
+ display: flex;
+}
+
+.g h1 {
+margin-left: 200px;
+margin-top: 100px; /* Move the element up to start */
+font-weight: 400;
+opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .9s;
+}
+
+.g h2 {
+margin-left: 200px;
+margin-top: 10px; /* Move the element up to start */
+font-weight: 400;
+font-size: 30px;
+opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .9s;
+}
+
+@keyframes slideBottom {
+0% {
+ transform: translateX(-100px);
+ opacity: 0;
+}
+100% {
+ transform: translateX(0px);
+ opacity: 1;
+}
+}
+@keyframes slideTop {
+0% {
+ transform: translateY(-100px);
+ opacity: 0;
+}
+100% {
+ transform: translateY(0px);
+ opacity: 1;
+}
+}
+
+.g p {
+ margin-left: 1000px;
+ margin-top: 10px;
+ font-size: 30px;
+ font-weight: 400;
+ opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .9s;
+}
+
+
+.mySlides {
+ display: none;
+}
+img {
+ vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+ width: 100%;
+  /* Set height to 100% of viewport height */
+ position: relative;
+ overflow: hidden; /* Hide overflow to prevent scrollbars */
+ margin-top: 20px;
+ 
+}
+
+/*.mySlides {
+ width: 100%;
+ height: 100px; /* Make slides fill the container 
+}*/
+
+.mySlides img {
+ width: 100%;
+ height: 60vh; /* Make images fill the slides */
+ object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ padding: 16px 8px; /* Adjusted padding */
+ margin-top: -22px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+ left: 0;
+ border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+ right: 0;
+ border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+ background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+ color: #f2f2f2;
+ font-size: 27px; /* Increase the font size */
+ padding: 8px 12px;
+ position: absolute;
+ bottom: 8px;
+ width: 100%;
+ text-align: center;
+ font-size: 400;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+ color: #f2f2f2;
+ font-size: 12px;
+ padding: 8px 12px;
+ position: absolute;
+ top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbbbbbdf;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+ background-color: rgba(255, 255, 255, 0.141);
+}
+
+/* Fading animation */
+.fade {
+ animation-name: fade;
+ animation-duration: 1.5s;
+}
+
+@keyframes fade {
+ from {opacity: .4} 
+ to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+ .prev, .next,.text {font-size: 11px}
+}
+
+.text1 {
+ font-weight: 600;
+ padding: 8px 12px;
+ position: absolute;
+ bottom: 8px;
+ width: 100%;
+ text-align: center;
+}
+
+.text h1 {
+ font-weight: 600;
+}
+
+.text1 h1 {
+ font-weight: 600;
+ font-size: 27px;
+}
+
+/* Add hover effect to images */
+.mySlides img:hover {
+ filter: blur(3px); /* Apply a slight blur on hover */
+}
+
+.h {
+ margin-top: 140px;
+}
+
+#section2{
+    
+     margin-bottom: 50px;
+     border: 1px solid white;
+}
+
+#section3{
+ margin-top: 300px;
+border: 1px solid white;
+}
+.content-wrapper{
+  margin-left: 300px;
+ margin-right: 300px;
+ margin-top: 10px;
+}
+.p{
+ margin-top: 100px;
+}
+.b{
+ margin-top: 30px;
+}
